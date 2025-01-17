@@ -38,7 +38,6 @@ app.use((req, res, next) => {
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 app.use('/js', express.static(path.join(__dirname, 'assets/js')));
-app.use('/login', express.static(path.join(__dirname, 'pages/login')));
 app.use('/noticias', validateToken, express.static(path.join(__dirname, 'pages/noticias')));
 app.use('/inicio', validateToken, express.static(path.join(__dirname, 'pages/miembros')));
 app.use('/membresias', validateToken, express.static(path.join(__dirname, 'pages/memberships')));
