@@ -1,0 +1,583 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evitar desbordamientos */
+  }
+  
+  
+  /* Fondo Hero con Gradiente */
+  .hero-section {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    text-align: center;
+    transition: all 0.3s ease;
+    color: white;
+    padding: 100px 0;
+  }
+  
+  /* Títulos */
+  .hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  /* Párrafo */
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Botones */
+  .hero-section .btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto Botón Primario */
+  .hero-section .btn-success:hover {
+    background-color: #28a745;
+    transform: scale(1.1);
+  }
+  
+  /* Efecto Botón Secundario */
+  .hero-section .btn-outline-light:hover {
+    background-color: #fff;
+    color: #2575fc;
+    transform: scale(1.1);
+  }
+  
+  /* Imagen */
+  .hero-section img {
+    max-width: 75%;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Imagen */
+  .hero-section img:hover {
+    transform: scale(1.05);
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .service-card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .service-card .content {
+    padding: 15px;
+    text-align: center;
+  }
+  .service-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .service-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .form-control-dark {
+    border-color: var(--bs-gray);
+  }
+  
+  .form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  }
+  
+  .text-small {
+    font-size: 85%;
+  }
+  
+  .dropdown-toggle:not(:focus) {
+    outline: 0;
+  }
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    user-select: none;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .entrenadores-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+    .carousel-item img {
+      height: 300px;
+    }
+    .card {
+      width: 80%;
+    }
+  }
+  
+  /* Componentes */
+  .card:hover {
+    border: 4px solid #00ff3c;
+    box-shadow: 0 16px 32px rgba(0, 255, 60, 0.8);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05);
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .carousel-caption h1,
+  .carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-indicators button {
+    background-color: #28a745;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .carousel-indicators .active {
+    background-color: #ffffff;
+  }
+  
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-item {
+    height: 32rem;
+  }
+  
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+      inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-signup {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  /* Sidebar y Navbar */
+  .sidebar {
+    background-color: #343a40;
+    color: #fff;
+    width: 250px;
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    transform: translateX(-100%);
+    z-index: 1000;
+    padding-top: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  
+  .sidebar .nav-link {
+    color: white;
+    padding: 15px;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+  }
+  
+  .content {
+    margin-left: 0; /* Ajustar margen para pantallas más pequeñas */
+    transition: all 0.3s ease;
+    padding: 1rem;
+    margin-top: 56px;
+  }
+  
+  .content.shift {
+    margin-left: 250px;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .entrenadores-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content {
+      margin-left: 0 !important;
+    }
+  
+    .sidebar.visible {
+      transform: translateX(0);
+    }
+  
+    .card {
+      width: 30%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+  
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+  
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    .card p {
+      font-size: 1rem;
+      color: #666;
+    }
+  
+  }
+  
+  /* Ajustes Generales */
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #212529;
+    color: white;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  header:hover {
+    background-color: #343a40;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' fill='white' d='M1 2h14v1H1zM1 8h14v1H1zM1 14h14v1H1z'/%3E%3C/svg%3E");
+  }
+  
+  .navbar .nav-link {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #00ff3c;
+  }
+  
+  /* Solución para el desplazamiento hacia la derecha */
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Sección de Entrenadores */
+  #entrenadores {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .entrenadores-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .entrenador {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  .entrenador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .entrenador img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #28a745;
+    transition: transform 0.3s;
+  }
+  
+  .entrenador img:hover {
+    transform: scale(1.1);
+  }
+  
+  .entrenador h2 {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    color: #212529;
+    font-weight: bold;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  
+  .entrenador p {
+    margin-top: 10px;
+    color: #6c757d;
+    font-size: 1rem;
+  }
+  
+  
+  #mapa-ubicacion iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+  }
+  
+  
+  /* Plan Básico */
+  .plan-basic {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  }
+  
+  /* Plan Plus */
+  .plan-plus {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  }
+  
+  /* Plan Premium */
+  .plan-premium {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  }
+  
+  /* Títulos y Precios */
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .card-price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Botones */
+  .btn-light {
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  
+  
+  
+  /* Evitar desbordamientos */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  main {
+    padding: 1rem;
+    margin-top: 56px;
+  }
+
+
+  /* Estilos específicos para el Login */
+
+/* Contenedor general exclusivo del login */
+.login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto; /* Centrado */
+}
+
+/* Título exclusivo del login */
+.login-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #6a11cb;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Etiquetas dentro del login */
+.login-container label {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  margin: 0.5rem 0 0.2rem;
+  color: #555;
+}
+
+/* Campos de entrada (input) dentro del login */
+.login-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al enfocar los inputs */
+.login-container input:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+/* Botón de enviar dentro del login */
+.login-container button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #6a11cb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover del botón */
+.login-container button:hover {
+  background-color: #2575fc;
+  transform: scale(1.05);
+}
+
+/* Mensaje de error */
+.login-container .error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+/* Responsividad específica del login */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 1.5rem;
+      width: 90%;
+  }
+
+  .login-container h1 {
+      font-size: 1.8rem;
+  }
+
+  .login-container button {
+      font-size: 0.9rem;
+  }
+}
