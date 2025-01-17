@@ -1,0 +1,72 @@
+
+  /* Ajustes Generales */
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #212529;
+    color: white;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  header:hover {
+    background-color: #343a40;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' fill='white' d='M1 2h14v1H1zM1 8h14v1H1zM1 14h14v1H1z'/%3E%3C/svg%3E");
+  }
+  
+  .navbar .nav-link {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #00ff3c;
+  }
+  
+  /* Solución para el desplazamiento hacia la derecha */
+  .containerfooter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+ 
+  
+  /* Botones */
+  .btn-light {
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  
+  
+  
+  /* Evitar desbordamientos */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  main {
+    padding: 1rem;
+    margin-top: 56px;
+  }
+
+

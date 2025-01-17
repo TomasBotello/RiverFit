@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="/pages/configuracion/configuracion.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Mi Cuenta</h1>
+    </header>
+
+    <!-- Contenedor de notificaciones -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <main class="container">
+        <!-- Información del miembro -->
+        <section class="card">
+            <h2>Información Personal</h2>
+            <p><strong>Nombre:</strong> <span id="miembro-nombre">Cargando...</span></p>
+            <p><strong>Correo:</strong> <span id="miembro-correo">Cargando...</span></p>
+            <p><strong>Teléfono:</strong> <span id="miembro-telefono">Cargando...</span></p>
+            <p><strong>Fecha de Registro:</strong> <span id="miembro-fecha-registro">Cargando...</span></p>
+        </section>
+
+        <!-- Información de la membresía -->
+        <section class="card">
+            <h2>Estado de Membresía</h2>
+            <p><strong>Nombre de Membresía:</strong> <span id="membresia-nombre">Cargando...</span></p>
+            <p><strong>Descripción:</strong> <span id="membresia-descripcion">Cargando...</span></p>
+            <p><strong>Fecha de Inicio:</strong> <span id="membresia-fecha-inicio">Cargando...</span></p>
+            <p><strong>Fecha de Fin:</strong> <span id="membresia-fecha-fin">Cargando...</span></p>
+            <p><strong>Estado:</strong> <span id="membresia-estado">Cargando...</span></p>
+        </section>
+
+        <!-- Sección para cambiar la contraseña -->
+        <section class="card">
+            <h2>Solicitar Cambio de Contraseña</h2>
+
+            <!-- Botón para solicitar código temporal -->
+            <div id="solicitar-codigo-section">
+                <button id="btn-solicitar-codigo" class="btn">Solicitar Código</button>
+            </div>
+
+            <!-- Campo para ingresar el código temporal y la nueva contraseña -->
+            <div id="ingresar-codigo-section" style="display: none;">
+                <form id="form-cambiar-contrasena" class="form">
+                    <label for="codigo">Código Temporal:</label>
+                    <input type="text" id="codigo" name="codigo" placeholder="Ingresa el código temporal" required>
+
+                    <label for="nueva-contrasena">Nueva Contraseña:</label>
+                    <input type="password" id="nueva-contrasena" name="nueva-contrasena" placeholder="Nueva contraseña" required>
+
+                    <button type="submit" class="btn">Cambiar Contraseña</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gimnasio Web Gym. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/pages/configuracion/configuracion.js"></script>
+</body>
+</html>
+
+
+
+
+
+

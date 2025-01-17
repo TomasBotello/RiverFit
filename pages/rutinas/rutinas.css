@@ -1,0 +1,206 @@
+/* Asegurar que el fondo cubra toda la página */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garantiza que ocupen toda la altura */
+    background-color: #1c1c1c; /* Color de fondo oscuro */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Para que ocupe el ancho completo */
+    min-height: 100vh; /* Para que cubra la altura completa de la pantalla */
+    background-color: #1c1c1c; /* Fondo oscuro */
+}
+
+.rutinas-container {
+    margin-top: calc(56px + 1rem); /* Altura del header más un espacio */
+}
+
+/* Tarjetas de rutinas */
+.rutina-card {
+    background: #2a2a2a; /* Fondo gris oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 350px;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover para expandir contenido */
+.rutina-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Título */
+.rutina-card h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00c853; /* Verde brillante */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mostrar "..." si el texto es largo */
+    transition: all 0.3s ease;
+}
+
+/* Subtítulo */
+.rutina-card .subtitulo {
+    font-size: 1.2rem;
+    color: #b3b3b3; /* Gris claro */
+    margin: 5px 0;
+    text-align: center;
+    white-space: nowrap; /* Truncar texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+
+/* Sección Detalles */
+.rutina-card .detalles {
+    font-size: 1rem;
+    color: #e0e0e0; /* Gris claro para contraste */
+    background: #1e4620; /* Verde oscuro */
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal; /* Mostrar todo por defecto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+
+/* Recomendaciones */
+.rutina-card .recomendaciones {
+    font-size: 1rem;
+    color: #e0e0e0; /* Gris claro para contraste */
+    background: #142a1a; /* Verde más oscuro */
+    padding: 10px;
+    border-radius: 5px;
+    white-space: normal; /* Mostrar todo por defecto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+
+/* Expandir contenido al hover */
+.rutina-card:hover h2,
+.rutina-card:hover .subtitulo,
+.rutina-card:hover .detalles,
+.rutina-card:hover .recomendaciones {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .rutina-card {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+    }
+}
+
+/* Botón de redirección */
+.btn-redirigir {
+    background-color: #00c853; /* Verde brillante */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px auto 0;
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-redirigir:hover {
+    background-color: #008f4c; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* Enlace en el título */
+.titulo-link {
+    color: #00c853; /* Verde brillante */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.titulo-link:hover {
+    text-decoration: underline;
+    color: #008f4c; /* Verde más oscuro */
+}
+
+
+
+
+/* Contenedor de notificaciones */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 300px;
+}
+
+/* Notificación */
+.notification {
+    background-color: #262626;
+    color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Éxito */
+.notification.success {
+    border-left: 5px solid #00c853;
+}
+
+/* Error */
+.notification.error {
+    border-left: 5px solid #d32f2f;
+}
+
+/* Botón de cierre */
+.notification .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

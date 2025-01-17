@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Suscripciones</title>
+    <link rel="stylesheet" href="/pages/memberships/membresia_usuario.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Suscripciones</h1>
+    </header>
+    
+    <!-- Contenedor de notificaciones -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Estado de Membresía -->
+    <section id="estado-membresia">
+        <h2>Estado de Mi Membresía</h2>
+        
+        <div class="membresia-details">
+            <div class="membresia-item">
+                <p><span>Nombre:</span> Visita</p>
+                <p><span>Descripción:</span> Acceso por un día, membresía personal, esta membresía no expande días, solo te da acceso durante un único día</p>
+            </div>
+            <div class="membresia-item">
+                <p><span>Fecha de Inicio:</span> 5/1/2025</p>
+                <p><span>Fecha de Expiración:</span> 6/1/2025</p>
+            </div>
+            <div class="membresia-item">
+                <p><span>Estado:</span> <span class="status-inactive">Inactivo</span></p>
+            </div>
+        </div>
+        
+        <div class="membresia-actions">
+            <button class="btn-acciones" onclick="openModal()">Ver Planes</button>
+        </div>
+    </section>
+    
+    <!-- Tabla de Suscripciones -->
+    <section id="subscriptions-container">
+        <h2>Mis Suscripciones Activas</h2>
+        <table id="subscriptions-table">
+            <thead>
+                <tr>
+                    <th>Nombre de Membresía</th>
+                    <th>Descripción</th>
+                    <th>Duración</th>
+                    <th>Precio</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Fin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de suscripciones se agregarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Modal de Membresías -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Comparar Membresías</h2>
+            <table id="membresia-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas de los planes de membresía se agregarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tabla de Suscripciones Compradas -->
+    <section id="compras-container">
+        <h2>Mis Suscripciones Compradas</h2>
+        <table id="compras-table">
+            <thead>
+                <tr>
+                    <th>Fecha de Compra</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas dinámicas se cargarán aquí -->
+            </tbody>
+        </table>
+    </section>
+
+
+    <script src="/pages/memberships/membresia_usuario.js"></script>
+</body>
+</html>

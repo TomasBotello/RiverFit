@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f; /* Fondo oscuro */
+    color: #d9d9d9; /* Texto principal */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.routine-guide {
+    max-width: 800px;
+    width: 90%; /* Adaptable a pantallas pequeñas */
+    margin: 20px auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #262626; /* Fondo del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center; /* Centra el contenido */
+    padding: 0 20px; /* Añade margen interno */
+}
+
+/* Encabezado principal (h1) */
+.toggle-header {
+    background-color: #005a34; /* Verde oscuro */
+    cursor: pointer;
+    padding: 15px;
+    font-size: 2rem;
+    color: #e0e0e0; /* Blanco roto */
+    border-bottom: 1px solid #3a7a57; /* Verde oliva */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-header:hover {
+    background-color: #3a7a57; /* Verde oliva */
+    color: #1f1f1f; /* Negro suave */
+}
+
+/* Contenido oculto inicialmente */
+.routine-content {
+    display: none;
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Mostrar contenido al activarse */
+.routine-guide.active .routine-content {
+    display: block;
+}
+
+/* Titulares */
+h1, h2, h3 {
+    margin: 0 auto 15px auto; /* Alinea perfectamente con los márgenes laterales */
+    max-width: 760px; /* Igual ancho que las imágenes */
+}
+
+h1 {
+    color: #00c853; /* Verde brillante */
+    font-size: 2rem;
+}
+
+h2 {
+    color: #3a7a57; /* Verde oliva */
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #b3b3b3; /* Gris claro */
+    font-size: 1.5rem;
+}
+
+/* Listas */
+ul {
+    margin: 10px auto;
+    max-width: 760px; /* Igual ancho que las imágenes */
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #d9d9d9; /* Texto principal */
+}
+
+/* Estilo de las imágenes */
+img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    border: 1px solid #555;
+    width: 100%;
+    max-width: 760px; /* Ajusta las imágenes al mismo ancho que los textos */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Separación y alineación */
+p, li, div {
+    margin: 10px auto;
+    line-height: 1.6; /* Espaciado entre líneas */
+    max-width: 760px; /* Igual ancho que las imágenes */
+}
+
+/* Enlaces */
+a {
+    color: #00c853; /* Verde brillante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3a7a57; /* Verde oliva */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #bbb;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Botones */
+button {
+    background-color: #00c853; /* Verde brillante */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008f4c; /* Verde más oscuro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .routine-guide {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    img {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    p, li, div {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en móviles */
+    }
+}
+
+
+
+
