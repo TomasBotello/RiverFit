@@ -56,7 +56,7 @@ app.use('/membresias', validateToken, express.static(path.join(__dirname, 'pages
 
 // Rutas públicas
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+  res.sendFile(path.join(__dirname, 'pages', 'login', 'login.html'));
 });
 
 app.get('/login', (req, res) => {
