@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000/api/auth/login/miembro';
+const API_URL = 'http://api.riverfit.com.mx/api/auth/login/miembro';
 
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();

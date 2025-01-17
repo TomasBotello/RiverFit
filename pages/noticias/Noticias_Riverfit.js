@@ -1,5 +1,5 @@
 // Base URL de la API
-const API_URL = 'http://localhost:4000/api/publicaciones';
+const API_URL = 'http://api.riverfit.com.mx/api/publicaciones';
 
 // Función para obtener publicaciones
 async function obtenerPublicaciones() {
