@@ -3,9 +3,9 @@ const token = localStorage.getItem("token");
 console.log("Token JWT:", token);  // Verifica si el token se obtiene correctamente
 
 // URL del endpoint de suscripciones y estado de membresía
-const apiSuscripcionesUrl = 'http://api.riverfit.com.mx/api/suscripciones';
-const apiEstadoMembresiaUrl = 'http://api.riverfit.com.mx/api/estado-membresia';
-const apiMembresiasUrl = 'http://api.riverfit.com.mx/api/membresias';  // Endpoint de membresías
+const apiSuscripcionesUrl = 'https://api.riverfit.com.mx/api/suscripciones';
+const apiEstadoMembresiaUrl = 'https://api.riverfit.com.mx/api/estado-membresia';
+const apiMembresiasUrl = 'https://api.riverfit.com.mx/api/membresias';  // Endpoint de membresías
 
 // Función para obtener las suscripciones
 const obtenerSuscripciones = async () => {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const apiListarArchivosUrl = 'http://api.riverfit.com.mx/api/listar-archivos';
+const apiListarArchivosUrl = 'https://api.riverfit.com.mx/api/listar-archivos';
 
 // Función para cargar las suscripciones compradas
 const obtenerSuscripcionesCompradas = async () => {

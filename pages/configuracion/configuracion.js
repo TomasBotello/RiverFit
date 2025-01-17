@@ -1,4 +1,4 @@
-const API_URL = 'http://api.riverfit.com.mx/api/';
+const API_URL = 'https://api.riverfit.com.mx/api/';
 
     // Verifica si el usuario tiene un token válido en localStorage
     const token = localStorage.getItem("token");

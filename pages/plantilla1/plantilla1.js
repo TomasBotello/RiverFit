@@ -1,5 +1,5 @@
 // Base URL de la API
-const API_URL = 'http://api.riverfit.com.mx/api/rutinas';
+const API_URL = 'https://api.riverfit.com.mx/api/rutinas';
 
 // Función para obtener datos de la API
 async function obtenerRutina(rutinaId, plantillaId) {

@@ -1,4 +1,4 @@
-const API_URL = 'http://api.riverfit.com.mx/api/rutinas/publicadas'; // Cambia esto por la URL real de tu API
+const API_URL = 'https://api.riverfit.com.mx/api/rutinas/publicadas'; // Cambia esto por la URL real de tu API
 
 // Función para limpiar etiquetas HTML y decodificar caracteres especiales
 function limpiarHTML(texto) {

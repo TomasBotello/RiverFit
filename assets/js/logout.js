@@ -14,7 +14,7 @@ document.getElementById('logout-button').addEventListener('click', async (e) => 
         }
 
         // Realizar la solicitud a la API para cerrar sesión
-        const response = await fetch('http://api.riverfit.com.mx/api/auth/logout', {
+        const response = await fetch('https://api.riverfit.com.mx/api/auth/logout', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,

@@ -1,5 +1,5 @@
 // Base URL de la API
-const API_URL = 'http://api.riverfit.com.mx/api/rutinas';
+const API_URL = 'https://api.riverfit.com.mx/api/rutinas';
 
 // Función para limpiar etiquetas HTML y decodificar entidades
 function limpiarHTML(texto) {
