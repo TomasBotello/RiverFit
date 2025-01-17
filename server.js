@@ -48,6 +48,7 @@ app.use('/configuracion', validateToken, express.static(path.join(__dirname, 'pa
 app.use('/rutinas', validateToken, express.static(path.join(__dirname, 'pages/rutinas')));
 app.use('/plantilla1', validateToken, express.static(path.join(__dirname, 'pages/plantilla1')));
 app.use('/plantilla2', validateToken, express.static(path.join(__dirname, 'pages/plantilla2')));
+app.use('/ayuda', express.static(path.join(__dirname, 'pages/ayuda')));
 
 // Aplicar `validateToken` para proteger recursos estáticos específicos
 app.use('/noticias', validateToken, express.static(path.join(__dirname, 'pages/noticias')));
@@ -84,8 +85,10 @@ app.get('/rutinas', validateToken, (req, res) => {
   res.sendFile(path.join(__dirname, 'pages/rutinas/rutinas.html'));
 });
 
-// Ruta dinámica para rutinas con plantillas
-// Ruta dinámica para las plantillas
+app.get('/ayuda', validateToken, (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages/ayuda/ayuda.html'));
+});
+
 // Ruta dinámica para las plantillas
 app.get('/rutinas/plantilla:id', validateToken, (req, res) => {
   const { id } = req.query; // Obtener el ID de la rutina desde los parámetros de la URL
@@ -102,12 +105,6 @@ app.get('/rutinas/plantilla:id', validateToken, (req, res) => {
       }
   });
 });
-
-
-
-
-
-
 
 // Ruta para cerrar sesión (sin tocar el API)
 app.get('/logout', (req, res) => {
